@@ -1,0 +1,30 @@
+<section>
+  <div class="continer mt-5 ms-5">
+    <div style="display:flex; justify-content:end; margin-right: 65px;">
+      {{#if user}}
+        <a
+          href="/admin/add-product"
+          class="btn btn-success"
+          style="width:auto;"
+        >Add Post</a>
+      {{/if}}
+
+    </div>
+    <div class="row">
+      {{#each products}}
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+            <img
+              src="/images/{{this._id}}.jpg"
+              class="card-img-top"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{this.Name}}</h5>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
